@@ -2,6 +2,20 @@
   // Function to get the random choice of the Computer
   function getComputerChoice() {
     const choice = ["rock", "paper", "scissors"];
-    return Math.floor(Math.random() * choice.length) + 1;
+    let randomizeChoice = Math.floor(Math.random() * choice.length) + 1;
+
+    if (randomizeChoice === 1) {
+      return "rock";
+    }
+    if (randomizeChoice === 2) {
+      return "paper";
+    }
+    if (randomizeChoice === 3) {
+      return "scissors";
+    }
   }
+  console.log(getComputerChoice());
+
+  // Function to play a round
+  function playRound(playerSelection, computerSelection) {}
 </script>
