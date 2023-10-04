@@ -18,7 +18,7 @@
 
   // Function to play a round
   function playRound(playerSelection, computerSelection) {
-    if (playerSelection === "rock") {
+    if (playerSelection.toLowerCase() === "rock") {
       if (computerSelection === "rock") {
         return "It is a tie!";
       } else if (computerSelection === "paper") {
@@ -26,7 +26,7 @@
       } else {
         return "Rock beats Scissors. You win!";
       }
-    } else if (playerSelection === "paper") {
+    } else if (playerSelection.toLowerCase() === "paper") {
       if (computerSelection === "paper") {
         return "It is a tie!";
       } else if (computerSelection === "scissors") {
@@ -34,7 +34,7 @@
       } else {
         return "You win! Paper beats Rock.";
       }
-    } else if (playerSelection === "scissors") {
+    } else if (playerSelection.toLowerCase() === "scissors") {
       if (computerSelection === "scissors") {
         return "It is a tie!";
       } else if (computerSelection === "rock") {
@@ -44,5 +44,7 @@
       }
     }
   }
-  console.log(playRound("scissors", "paper"));
+  let playerSelection = "PaPer";
+  let computerSelection = getComputerChoice();
+  console.log(playRound(playerSelection, computerSelection));
 </script>
