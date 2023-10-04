@@ -17,5 +17,32 @@
   console.log(getComputerChoice());
 
   // Function to play a round
-  function playRound(playerSelection, computerSelection) {}
+  function playRound(playerSelection, computerSelection) {
+    if (playerSelection === 1) {
+      if (computerSelection === 1) {
+        return "It is a tie!";
+      } else if (computerSelection === 2) {
+        return "Paper beats Rock, so the computer wins!!";
+      } else {
+        return "Rock beats Scissors. You win!";
+      }
+    } else if (playerSelection === 2) {
+      if (computerSelection === 2) {
+        return "It is a tie!";
+      } else if (computerSelection === 3) {
+        return "You lose! Scissors beat Paper!";
+      } else {
+        return "You win! Paper beats Rock.";
+      }
+    } else if (playerSelection === 3) {
+      if (computerSelection === 3) {
+        return "It is a tie!";
+      } else if (computerSelection === 1) {
+        return "You lose! Rock beats Scissors.";
+      } else {
+        return "You win! Scissors beat Paper";
+      }
+    }
+  }
+  console.log(playRound(2, 3));
 </script>
